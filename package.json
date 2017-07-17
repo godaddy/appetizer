@@ -1,0 +1,40 @@
+{
+  "name": "appetizer",
+  "version": "0.0.0",
+  "description": "API client for appetize.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/unit.test.js",
+    "integration": "mocha test/integration.test.js",
+    "lint": "eslint-godaddy index.js test/unit.test.js test/integration.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godaddy/appetizer.git"
+  },
+  "keywords": [
+    "appetize",
+    "appetizer",
+    "appetize.io",
+    "api",
+    "client"
+  ],
+  "author": "GoDaddy Operating Company, LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/godaddy/appetizer/issues"
+  },
+  "homepage": "https://github.com/godaddy/appetizer#readme",
+  "dependencies": {
+    "diagnostics": "^1.1.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "assume": "^1.5.1",
+    "eslint": "^4.1.1",
+    "eslint-config-godaddy": "^1.1.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^3.4.2"
+  }
+}
