@@ -55,6 +55,19 @@ describe('Appetizer', function () {
       assume(flat).deep.equals({ foo: 'bar', bar: 'hi' });
     });
 
+    it('does not flatten file properties', function () {
+      const fs = require('fs');
+      const file = fs.createReadStream(__filename);
+
+      const flat = app.flatten({
+        foo: 'bar',
+        bar: 'hi',
+        file: file
+      });
+
+      assume(flat.file).equals(file);
+    });
+
     it('changes deep stucture to dot notated keys', function () {
       const flat = app.flatten({
         foo: 'bar',
