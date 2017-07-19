@@ -40,7 +40,7 @@ class Appetizer {
    */
   flatten(obj) {
     return Object.keys(obj).reduce((memo, key) => {
-      if (this.type(obj[key]) !== 'object') {
+      if (this.type(obj[key]) !== 'object' || key === 'file') {
         memo[key] = obj[key];
         return memo;
       }
