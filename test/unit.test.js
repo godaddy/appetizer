@@ -68,6 +68,15 @@ describe('Appetizer', function () {
       assume(flat.file).equals(file);
     });
 
+    it('transforms values to string', function () {
+      const flat = app.flatten({
+        foo: 100,
+        bar: true
+      });
+
+      assume(flat).deep.equals({ foo: '100', bar: 'true' });
+    });
+
     it('changes deep stucture to dot notated keys', function () {
       const flat = app.flatten({
         foo: 'bar',
