@@ -41,12 +41,20 @@ class Appetizer {
   flatten(obj) {
     return Object.keys(obj).reduce((memo, key) => {
       if (this.type(obj[key]) !== 'object' || key === 'file') {
-        memo[key] = obj[key];
+        let value = obj[key];
+
+        if (typeof value !== 'object') value = value.toString();
+
+        memo[key] = value;
         return memo;
       }
 
       Object.keys(obj[key]).forEach((name) => {
-        memo[key + '.' + name] = obj[key][name];
+        let value = obj[key][name];
+
+        if (typeof value !== 'object') value = value.toString();
+
+        memo[key + '.' + name] = value;
       });
 
       return memo;
