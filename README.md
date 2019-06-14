@@ -1,5 +1,7 @@
 # Appetizer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/godaddy/appetizer.svg)](https://greenkeeper.io/)
+
 A Node.js REST based API client for Appetize.io.
 
 ## Installation
