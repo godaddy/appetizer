@@ -1,3 +1,6 @@
+> [!WARNING]
+> **This library is deprecated, retired and no longer undevelopment.**
+
 # Appetizer
 
 A Node.js REST based API client for Appetize.io.
